@@ -38,6 +38,17 @@ const CreateBook = () => {
           />
         </div>
         <div>
+          {/* <label htmlFor="title">Title:</label> */}
+          <input
+            type="text"
+            id="author"
+            placeholder="Author"
+            value={author}
+            onChange={handleTitleChange}
+            required
+          />
+        </div>
+        <div>
           {/* <label htmlFor="author">Author:</label> */}
           <select className="category" onChange={handleAuthorChange} id="color" name="category">
             <option value={author}>Category</option>
