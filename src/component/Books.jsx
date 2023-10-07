@@ -1,12 +1,12 @@
 import React from 'react';
-import Book from './Book';
+// import Book from './Book';
 import CreateBook from './CreateBook';
 
 const Books = () => (
   <div>
+    {/* <Book />
     <Book />
-    <Book />
-    <Book />
+    <Book /> */}
     <CreateBook />
   </div>
 );
