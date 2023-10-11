@@ -1,26 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import CreateBook from './CreateBook';
 
 const BookList = () => {
   // Array of book data
-  const books = [
-    {
-      author: 'Author 1',
-      title: 'Book 1',
-      category: 'Category A',
-    },
-    {
-      author: 'Author 2',
-      title: 'Book 2',
-      category: 'Category B',
-    },
-    {
-      author: 'Author 3',
-      title: 'Book 3',
-      category: 'Category C',
-    },
-  ];
+  const books = useSelector((state) => state.book);
 
   return (
     <div className="book-list">
