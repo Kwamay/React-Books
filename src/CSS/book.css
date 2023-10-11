@@ -1,0 +1,11 @@
+.book-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #edebff;
+  border-radius: 6px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 5.5rem;
+  padding: 0 2rem;
+}
