@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Nav from './component/Nav';
 import BookList from './component/BookList';
-import Categories from './component/Categories';
+import CategoryList from './component/Categories';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<BookList />} />
-            <Route path="/categories" element={<Categories />} />
+            <Route path="/categories" element={<CategoryList />} />
           </Routes>
         </div>
       </div>

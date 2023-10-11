@@ -27,7 +27,6 @@ const CreateBook = () => {
       <h2>Add a New Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          {/* <label htmlFor="title">Title:</label> */}
           <input
             type="text"
             id="title"
@@ -38,7 +37,6 @@ const CreateBook = () => {
           />
         </div>
         <div>
-          {/* <label htmlFor="title">Title:</label> */}
           <input
             type="text"
             id="author"
@@ -49,7 +47,6 @@ const CreateBook = () => {
           />
         </div>
         <div>
-          {/* <label htmlFor="author">Author:</label> */}
           <select className="category" onChange={handleAuthorChange} id="color" name="category">
             <option value={author}>Category</option>
             <option value="green">Action</option>
