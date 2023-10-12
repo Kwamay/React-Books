@@ -27,7 +27,7 @@ const CreateBook = () => {
       <h2>Add a New Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
-         <input
+          <input
             type="text"
             id="title"
             placeholder="Title"
