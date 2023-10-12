@@ -3,7 +3,9 @@ import Delete from './Delete';
 import '../CSS/book.css';
 
 const Book = (props) => {
-  const { category, title, author } = props;
+  const {
+    id, category, title, author,
+  } = props;
   return (
     <div className="book-container">
       <div>
@@ -12,7 +14,7 @@ const Book = (props) => {
         <small>{author}</small>
         <div>
           <button type="button">Comments</button>
-          <Delete />
+          <Delete id={id} />
           <button type="button">Edit</button>
         </div>
       </div>

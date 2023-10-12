@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import '../CSS/form.css';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
 const CreateBook = () => {
   // Define state variables for the book title and author
+  const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   // Handle input changes and update the state variables
   const handleTitleChange = (event) => {
@@ -14,12 +19,23 @@ const CreateBook = () => {
   const handleAuthorChange = (event) => {
     setAuthor(event.target.value);
   };
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
+  };
 
   // Handle form submission (you can add your logic here)
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can add your code to handle the submission of the book data here
-    // For example, you can send an API request to save the book data
+    const newBook = {
+      id: uuidv4(),
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
+    setTitle('');
+    setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -42,18 +58,18 @@ const CreateBook = () => {
             id="author"
             placeholder="Author"
             value={author}
-            onChange={handleTitleChange}
+            onChange={handleAuthorChange}
             required
           />
         </div>
         <div>
-          <select className="category" onChange={handleAuthorChange} id="color" name="category">
-            <option value={author}>Category</option>
-            <option value="green">Action</option>
-            <option value="blue">Fantasy</option>
-            <option value="yellow">Science Fiction</option>
-            <option value="purple">Adventure</option>
-            <option value="purple">Drame & Romance</option>
+          <select className="category" onChange={handleCategoryChange} id="color" name="category">
+            <option value={category}>Category</option>
+            <option value="Action">Action</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Fiction">Science Fiction</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Drama & Romance">Drame & Romance</option>
           </select>
         </div>
         <button type="submit">Add Book</button>
