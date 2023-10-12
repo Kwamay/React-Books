@@ -5,8 +5,7 @@ import CreateBook from './CreateBook';
 
 const BookList = () => {
   // Array of book data
-  const books = useSelector((state) => state.book);
-
+  const books = useSelector((state) => state.book.books);
   return (
     <div className="book-list">
       {books.map((book) => (

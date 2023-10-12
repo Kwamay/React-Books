@@ -1,19 +1,16 @@
-const ADD_CATEGORY = 'bookstore/category/ADD_CATEGORY';
-const underConstruction = 'Under Construction';
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
-
-export const addCategory = () => ({
-  type: ADD_CATEGORY,
-  text: underConstruction,
+const categorySlice = createSlice({
+  name: 'categories',
+  initialState: { categories: [], Status: 'Under Construction' },
+  reducers: {
+    getStatus: (state, action) => {
+      state.categories = action.payload === 'Under construction'
+        ? 'Under construction'
+        : state.categories;
+    },
+  },
 });
 
-const categoryReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_CATEGORY:
-      return action.text;
-    default: return state;
-  }
-};
-
-export default categoryReducer;
+export const { getStatus } = categorySlice.actions;
+export default categorySlice.reducer;
