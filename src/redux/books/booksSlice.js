@@ -17,8 +17,7 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (book) => {
 });
 
 export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
-  const itemId = id;
-  await axios.delete(`${baseUrl}${apiKey}/books/${itemId}`, itemId);
+  await axios.delete(`${baseUrl}${apiKey}/books/${id}`);
   return id;
 });
 
@@ -29,7 +28,7 @@ export const getBooks = createAsyncThunk(GET_BOOK, async () => {
   const keys = Object.keys(data);
   keys.forEach((key) => {
     arr.push({
-      itemId: key,
+      item_id: key,
       title: data[key][0].title,
       author: data[key][0].author,
       category: data[key][0].category,
