@@ -1,17 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { getStatus } from '../redux/categories/categoriesSlice';
+// import React from 'react';
+// import { useSelector } from 'react-redux';
 
-function CategoryList() {
-  const categories = useSelector(getStatus);
-  const handleClick = () => `Status: ${categories}`;
+// function CategoryList() {
+//   const categories = useSelector();
+//   return (
+//     <div>
+//       <button type="button">Get Status</button>
+//       <div />
+//     </div>
+//   );
+// }
 
-  return (
-    <div>
-      <button type="button" onClick={handleClick}>Get Status</button>
-      <div />
-    </div>
-  );
-}
-
-export default CategoryList;
+// export default CategoryList;
