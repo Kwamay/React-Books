@@ -8,27 +8,27 @@ const Book = (props) => {
   } = props;
   return (
     <div className="book-container">
-      <div>
-        <p>{category}</p>
-        <h3>{title}</h3>
-        <small>{author}</small>
-        <div>
-          <button type="button">Comments</button>
+      <div className="book-details">
+        <p className="category">{category}</p>
+        <h3 className="title">{title}</h3>
+        <small className="author">{author}</small>
+        <div className="button-container">
+          <button className="action-button" type="button">Comments</button>
           <Delete id={id} />
-          <button type="button">Edit</button>
+          <button type="button" className="action-button">Edit</button>
         </div>
       </div>
-      <div>
-        <div>Circle</div>
-        <p>
+      <div className="percentage-container">
+        <div className="circle" />
+        <p className="percentage">
           64%
-          <span>completed</span>
+          <span className="completed">Completed</span>
         </p>
       </div>
-      <div>
-        <p>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
-        <button type="button">Update Progress</button>
+      <div className="chapter-container">
+        <p className="cur-chapter">CURRENT CHAPTER</p>
+        <p className="chapter">Chapter 17</p>
+        <button className="update" type="button">Update Progress</button>
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ const CreateBook = () => {
 
   return (
     <div className="form-container">
-      <h2>Add a New Book</h2>
+      <h2 className="form-intro">Add a New Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
@@ -72,7 +72,7 @@ const CreateBook = () => {
             <option value="Drama & Romance">Drame & Romance</option>
           </select>
         </div>
-        <button type="submit">Add Book</button>
+        <button className="add-book" type="submit">Add Book</button>
       </form>
     </div>
   );
