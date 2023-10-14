@@ -40,7 +40,7 @@ const CreateBook = () => {
 
   return (
     <div className="form-container">
-      <h2>Add a New Book</h2>
+      <h2 className="form-intro">Add a New Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
