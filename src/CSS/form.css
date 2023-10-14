@@ -20,3 +20,14 @@ form input {
   padding: 8px;
   border-radius: 6px;
 }
+
+.add-book {
+  padding: 5px 14px;
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 6px;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-right: 3rem;
+}

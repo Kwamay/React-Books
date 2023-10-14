@@ -10,7 +10,7 @@ const Delete = (props) => {
   };
 
   return (
-    <button id={id} type="button" onClick={handleDelete}>
+    <button id={id} type="button" className="action-button" onClick={handleDelete}>
       Delete
     </button>
   );

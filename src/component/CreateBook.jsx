@@ -72,7 +72,7 @@ const CreateBook = () => {
             <option value="Drama & Romance">Drame & Romance</option>
           </select>
         </div>
-        <button type="submit">Add Book</button>
+        <button className="add-book" type="submit">Add Book</button>
       </form>
     </div>
   );
